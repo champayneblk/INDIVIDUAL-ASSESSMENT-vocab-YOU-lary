@@ -48,9 +48,9 @@ Create issue tickets from the items below to help you get started.
 # MVP Requirements
 [MVP Wireframe](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
 - [ ] An ERD of your data
-- [ ] Use Firebase for DB and authentication
-- [ ] Technical Flow chart (timebox this)
-- [ ] The app has a navigation bar
+- [x] Use Firebase for DB and authentication
+- [] Technical Flow chart (timebox this)
+- [] The app has a navigation bar
   - [ ] A logo
   - [ ] Logout button
   - [ ] Create Entry
@@ -59,12 +59,12 @@ Create issue tickets from the items below to help you get started.
 **The most basic requirement for this project is that a user can:**
 - [ ] Login and Logout of the application using Firebase Google Authentication
 - [ ] only see the vocabulary entries that they created
-- [ ] CREATE a vocabulary entry:
-  - [ ] Title
-  - [ ] Definition
-  - [ ] Language/Tech
-  - [ ] Time submitted - Not on form. Handle in your JS
-  - [ ] user ID - Not on form. Pull from User object.
+- [x] CREATE a vocabulary entry:
+  - [x] Title
+  - [x] Definition
+  - [x] Language/Tech
+  - [x] Time submitted - Not on form. Handle in your JS
+  - [x] user ID - Not on form. Pull from User object.
 - [ ] READ THIER entries
 - [ ] UPDATE THEIR entries
 - [ ] DELETE THEIR entries
