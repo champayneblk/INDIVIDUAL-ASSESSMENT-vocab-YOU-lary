@@ -1,7 +1,7 @@
-import { showList } from '../pages/vocabList';
+import showList from '../pages/vocabList';
 import { addWords, updateList, getVocabWords } from '../api/vocabData';
 
-const formEvents = () => {
+const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     // TODO: CLICK EVENT FOR SUBMITTING FORM FOR ADDING A WORD
@@ -11,7 +11,7 @@ const formEvents = () => {
         title: document.querySelector('#title').value,
         defintion: document.querySelector('#definition').value,
         language: document.querySelector('#language').value,
-        // uid: user.uid,
+        uid: user.uid,
       };
       // console.warn(payload);
       addWords(payload).then(({ name }) => {

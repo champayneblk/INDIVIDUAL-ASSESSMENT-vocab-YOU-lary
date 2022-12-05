@@ -5,15 +5,16 @@ import domEvents from '../events/domEvents';
 import formEvents from '../events/formEvents';
 import logoutButton from '../components/buttons/logoutButton';
 import { getVocabWords } from '../api/vocabData';
-import { showList } from '../pages/vocabList';
+// import viewWord from '../pages/viewWord';
+import showList from '../pages/vocabList';
 
-const startApp = () => {
-  domBuilder(); // Builds the DOM
+const startApp = (user) => {
+  domBuilder(user); // Builds the DOM
+  domEvents(user);
+  formEvents(user);
   navBar();
-  domEvents();
-  formEvents();
   logoutButton();
-  navigationEvents();
+  navigationEvents(user);
   getVocabWords().then((cards) => showList(cards));
 };
 

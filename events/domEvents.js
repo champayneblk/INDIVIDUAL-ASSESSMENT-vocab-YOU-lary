@@ -5,12 +5,12 @@ import {
   deleteWord
 } from '../api/vocabData';
 
-import { showList } from '../pages/vocabList';
+import showList from '../pages/vocabList';
 import viewWord from '../pages/viewWord';
 import addVocabWordForm from '../components/forms/addVocabWordForm';
 
 const domEvents = () => {
-  document.querySelector('#main-containter').addEventListener('click', (e) => {
+  document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-word')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {

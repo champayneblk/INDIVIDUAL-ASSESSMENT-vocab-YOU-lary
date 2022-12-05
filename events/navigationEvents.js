@@ -1,5 +1,5 @@
 import { getVocabWords } from '../api/vocabData';
-import { showList } from '../pages/vocabList';
+import showList from '../pages/vocabList';
 import { signOut } from '../utils/auth';
 
 const navigationEvents = () => {
