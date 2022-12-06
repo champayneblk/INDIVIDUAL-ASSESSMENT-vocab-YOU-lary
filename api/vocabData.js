@@ -76,6 +76,21 @@ const updateList = (payload) => new Promise((resolve, reject) => {
 });
 
 // Filter by language
+const Filter = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="language"`, {
+    method: 'GET',
+    header: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const JS = Object.values(data).filter((item) => item.language);
+      resolve(JS);
+    })
+    .catch(reject);
+});
+
 const JSWords = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/words.json?orderBy="language"&equalTo="JavaScript"`, {
     method: 'GET',
@@ -127,6 +142,7 @@ export {
   getSingleWord,
   deleteWord,
   updateList,
+  Filter,
   JSWords,
   CSSWords,
   HTMLWords

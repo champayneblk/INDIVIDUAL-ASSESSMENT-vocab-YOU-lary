@@ -1,4 +1,4 @@
-import { getVocabWords } from '../api/vocabData';
+import { Filter, getVocabWords } from '../api/vocabData';
 import showList from '../pages/vocabList';
 import { signOut } from '../utils/auth';
 
@@ -9,7 +9,7 @@ const navigationEvents = () => {
 
   // TODO:  Languages
   document.querySelector('#languages').addEventListener('click', () => {
-    // booksOnSale(user.uid).then(showBooks);
+    Filter().then(showList);
   });
 
   // TODO: ALL WORDS

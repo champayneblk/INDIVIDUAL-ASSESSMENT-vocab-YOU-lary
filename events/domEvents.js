@@ -21,12 +21,13 @@ const domEvents = () => {
           getVocabWords().then(showList);
         });
       }
-      if (e.target.id.inclues('view-list')) {
+
+      if (e.target.id.includes('view-list')) {
         console.warn('View List');
         getVocabWords().then(showList);
       }
 
-      if (e.target.id.includes('add-word-btn')) {
+      if (e.target.id.includes('add-vocab-button')) {
         console.warn('ADD word');
         addVocabWordForm();
       }

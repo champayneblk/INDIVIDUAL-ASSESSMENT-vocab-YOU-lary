@@ -9,8 +9,8 @@ import renderToDOM from '../utils/renderToDom';
 const showList = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-book-btn">Add A Vocabulary Word</button>';
-  renderToDOM('#add-word-button', btnString);
+  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-vocab-button">Add A Vocabulary Word</button>';
+  renderToDOM('#add-word-btn', btnString);
 
   let domString = '';
   array.forEach((item) => {
@@ -19,8 +19,9 @@ const showList = (array) => {
         <div class="card-body" style="height: 180px;">
           <h5 class="card-title">${item.title}</h5>
             <hr>
-            <i class="btn btn-success fas fa-eye" id="view-list--${item.definition}"></i>
-            <i id="edit-entry-btn--${item.language}" class="fas fa-edit btn btn-info"></i>
+            <h6 class="card-subtitle mb-2 text-muted">${item.language}</h6>
+            <p class="card-text">${item.definition}</p>
+            <i id="edit-entry-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
             <i id="delete-word--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
         </div>
       </div>`;

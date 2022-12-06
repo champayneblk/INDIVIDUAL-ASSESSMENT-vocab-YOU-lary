@@ -16,7 +16,7 @@ const viewWord = (obj) => {
   </div>
 </div>`;
 
-  renderToDOM('#main-container', domString);
+  renderToDOM('#view', domString);
 };
 
 export default viewWord;
