@@ -21,6 +21,7 @@ const showList = (array) => {
             <hr>
             <h6 class="card-subtitle mb-2 text-muted">${item.language}</h6>
             <p class="card-text">${item.definition}</p>
+            <i id="view-word-btn--${item.firebaseKey}" class="fas fa-edit btn btn-success"></i>
             <i id="edit-entry-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
             <i id="delete-word--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
         </div>

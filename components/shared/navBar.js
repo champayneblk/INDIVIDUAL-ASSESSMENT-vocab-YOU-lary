@@ -4,6 +4,7 @@ const navBar = () => {
   const domString = `
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
     <div class="container-fluid">
+      <a class="navbar-brand title" href="#">Vocab Shuffle</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -15,12 +16,27 @@ const navBar = () => {
           </a>
         </li>
         <li class="nav-item">
-              <a class="nav-link" href="#" id="languages"> Languages</a>
-            </li>
-        <span class="navbar-text">
+              <a class="nav-link" href="#" id="languages-css-btn"> CSS Words </a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link" href="#" id="languages-js-btn"> JavaScript Words</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link" href="#" id="languages-html-btn"> HTML Words</a>
+        </li>
+        <li>
+        <input
+          class="form-control mr-sm-2"
+          id="search"
+          placeholder="Search Vocabluary List"
+          aria-label="Search"
+        />
+        </li>
+      </ul>
+      <span class="navbar-text">
             <div id="cart-button"></div>
             <div id="logout-button"></div>
-          </span>
+      </span>
 
     </div>
     </nav>`;
